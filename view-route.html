@@ -24,7 +24,8 @@
     });
 
     map.on('load', () => {
-      fetch('route-keelung-tokyo.geojson')
+      // ✅ 絶対パス（GitHub Pagesで安定）
+      fetch('https://veltra-maps.github.io/route_map/route-keelung-tokyo.geojson')
         .then(res => res.json())
         .then(data => {
           map.addSource('route', { type: 'geojson', data: data });
